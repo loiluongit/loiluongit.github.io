@@ -1,1 +1,260 @@
-Hello, I'm Loi
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i&subset=vietnamese" rel="stylesheet">
+    <style>
+      body {
+        font-family: Roboto;
+        max-width: 768px;
+        padding: 15px;
+        margin: 20px auto;
+        color: #46494c;
+        background-color: #fafafa;
+      }
+      .full-name {
+        font-size: 30px;
+        font-weight: normal;
+        text-align: center;
+        color: #1985a1;
+      }
+      .section__title {
+        font-weight: 300;
+        font-size: 25px;
+        margin: 15px 0 10px 0;
+        padding: 5px 0;
+        border-bottom: 1px solid #c5c3c6;
+        color: #1985a1;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+      }
+      .project {
+        margin-top: 20px;
+      }
+      .project:first-child {
+        margin-top: 10px;
+      }
+      .project__title {
+        color: #4c5c68;
+      }
+      .project__title span {
+        font-size: 20px;
+      }
+      .project__title--sub {
+        margin-left: 20px;
+        font-size: 15px !important;
+        font-weight: 300;
+      }
+      .project__desc {
+        display: flex;
+      }
+      .project__desc .label {
+        min-width: 120px;
+        font-style: italic;
+      }
+      .project__desc .text {
+        margin-left: 10px;
+      }
+      .education {
+        margin-top: 20px;
+      }
+      .education__title {
+        font-size: 20px;
+      }
+      .education__period {
+        font-weight: 300;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="my-cv">
+      <div class="full-name">Lương Thành Lợi</div>
+      <section class="section">
+        <div class="section__title">
+          Introduction
+        </div>
+        <div class="section__content">
+          <p>
+            I am a front-end developer with over 3 years experience. I aware that the technologies are updated even every seconds, so I always stay humble and keep learing to be better by single day. To finally purpose - creating a nice user interface that make user happy and comfortable on any touch. <br>
+            On my spare time, I often play badminton or take a camping travel.
+
+          </p>
+          <div class="row">
+            <div class="col-sm-4">
+              <strong>Date of birth:</strong> 25-03-1994
+            </div>
+            <div class="col-sm-4">
+              <strong>Email:</strong> loiluongit@gmail.com
+            </div>
+            <div class="col-sm-4">
+              <strong>Phone number:</strong> 0983 244 955
+            </div>
+            <div class="col-sm-12">
+              <strong>Hobbies:</strong> Badminton and Traveling
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__title">
+          Skills
+        </div>
+        <div class="section__content">
+          <ul class="list">
+            <li>
+              <strong>Languages:</strong> 
+              Javascript, HTML, CSS, Swift, Java, Python
+            </li>
+            <li>
+              <strong>Frameworks:</strong> 
+              React, Angular, Backbone, Jquery, Vue, Koa
+            </li>
+            <li>
+              <strong>Others</strong> 
+              Docker, Vagrant, Redux, Jasmin, Scss, Webpack, Gulp, MongoDB, Postgresql, MySql
+            </li>
+            <li>
+              <strong>Tools:</strong> 
+              Visual Studio Code, Webstorm, Eclipse, Xcode, Git, Linux
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__title">
+          Soft skills
+        </div>
+        <div class="section__content">
+          <div class="row">
+            <div class="col-sm-6">
+              Teamwork effectively <br>
+              Learn new things quickly
+            </div>
+            <div class="col-sm-6">
+              English communication <br>
+              Logical thinking and resolve problem
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__title">
+          Projects
+        </div>
+        <div class="section__content">
+          <div class="projects" data-bind="foreach: projects">
+            <div class="project">
+              <div class="project__title">
+                <span data-bind="text: name"></span>
+                <span class="project__title--sub" data-bind="text: subtitle"></span>
+              </div>
+              <div class="project__desc">
+                <div class="label">Description:</div>
+                <div class="text" data-bind="text: description"></div>
+              </div>
+              <div class="project__desc">
+                <span class="label">Technologies:</span>
+                <span class="text" data-bind="text: technologies"></span>
+              </div>
+              <div class="project__desc">
+                <span class="label">Responsibilities:</span>
+                <span class="text" data-bind="text: responsibilities"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__title">
+          Education & Careers
+        </div>
+        <div class="section__content">
+          <div class="education">
+            <div class="education__title">fram^</div>
+            <div class="education__period">April 2018 – Present</div>
+          </div>
+          <div class="education">
+            <div class="education__title">TMA Solutions</div>
+            <div class="education__period">January 2016 – April 2018</div>
+          </div>
+          <div class="education">
+            <div class="education__title">University of Science</div>
+            <div class="education__period">September 2012 – May 2016</div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+<!--     
+    <div class="text-center mt-3">
+      <button class="btn" id="print-cv-btn">Print this CV</button>        
+    </div> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.14.0/printThis.min.js"></script>
+    
+    <script>
+      $(function(){
+        var projects = [{ 
+              name: 'Dealer Setup',
+              subtitle: 'Desktop Application',
+              description: 'This application support to connect, manage and configurate digital devices which produced by ClearOne',
+              technologies: 'Java, Vert.x, AngularJS',
+              responsibilities: 'Take care of the front-end side with jobs improving UI, implemment new fearures and maintaining existed one'
+            }, { 
+              name: 'Timpanagos Dialer',
+              subtitle: 'Mobile Application',
+              description: ' Used to control ClearOne’s device (Converge Pro 2 Dialer) to make, receive VOIP/Telco call, add contact to phonebook, manage connection, etc.',
+              technologies: 'Objective-C, Swift, Android Java, SQLite',
+              responsibilities: 'Layout UI and implement features on iOS'
+            }, { 
+              name: 'Omena',
+              subtitle: 'Web Application',
+              description: 'Providing a friendly interface for booking and manage the reservations of Omena hotel',
+              technologies: 'Java, Backbone, AngularJS, HTML5, SASS, Gulp, Karma Jasmine',
+              responsibilities: 'Working front end side, implementing new features on booking site and maintaining the management site'
+            }, { 
+              name: 'Codelab',
+              subtitle: 'Web Application',
+              description: 'Support for learning and practicing via web environment',
+              technologies: 'Java Spring Boot, React-Redux, Microservice Architecture, Vagrant, Docker, noVNC',
+              responsibilities: 'Implement new features'
+            }, { 
+              name: 'VieVie Healthcare',
+              subtitle: 'Web & Mobile Application',
+              description: 'Support communication between doctor and patient',
+              technologies: 'Using React-Redux on management site',
+              responsibilities: 'Implement new features and fixing bugs'
+            }, { 
+              name: 'TSC Direct',
+              subtitle: 'Web Application',
+              description: 'This web application is where user fill in the insurance form, the information is underwritten and proceed to online payment',
+              technologies: 'Python - Django, Jquery, Vuejs',
+              responsibilities: 'Implementing new features and fixing bugs'
+            },
+          ];
+        
+        ko.applyBindings({
+          projects: projects
+        });
+
+        $('#print-cv-btn').click(function(){
+          $('#my-cv').printThis({
+            importCSS: true 
+          });
+        });
+
+      });
+    </script>
+    
+  </body>
+</html>
+
+
